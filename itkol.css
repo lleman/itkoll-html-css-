@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+    font-family: Calibri;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.background {
+    width: 100%;
+    height: 850px;
+    background-color: rgb(2, 2, 88);
+    color: white;
+    padding: 50px 150px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.menu li {
+    position: relative;
+    padding: 5px 35px 5px 0px;
+}
+.menu > li::after {
+    content: "";
+    position: absolute;
+    width: max-content;
+    bottom: -10px;
+    left: 0px;
+    border-bottom: 3px solid white;
+    transition: all 0.5s ease 0s;
+}
+.menu > li:hover::after{
+    width: 65%;
+}
+.menu li:nth-child(5):hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 30px;
+    transition: all 500ms ease 0s;
+}
+
+.dropdown {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    background-color: white;
+    color: rgb(4, 4, 84);
+    width: max-content;
+    transition: all 500ms ease 0s;
+    padding: 15px 10px;
+}
+.dropdown li {
+    padding-left: 10px;
+    text-align: left;
+}
+
+.get-quote {
+    width: 180px;
+    height: 50px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-image: initial;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.get-quote::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    background-color: white;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    transition: all 500ms ease 0s;
+}
+.get-quote:hover {
+    color: rgb(214, 24, 87);
+}
+.get-quote:hover::before{
+    transform: translateY(0%);
+}
+.main {
+    width: 100%;
+    height: 100%;
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-position: 100% 90%;
+}
+.text {
+    padding-top: 150px;
+}
+.main button {
+    width: 150px;
+    height: 50px;
+    margin-top: 50px;
+    font-size: 16px;
+    color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(3, 3, 76);
+    border-image: initial;
+    border-radius: 25px;
+    background: linear-gradient(pink, coral, red);
+    transition: all 0.3s ease 0s;
+}
+.main button:hover {
+    background: linear-gradient(red, coral, pink);
+}
+.section-2 {
+    text-align: center;
+    padding: 100px 150px;
+}
+.section-2 ul {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+.section-2 li {
+    height: 360px;
+    position: relative;
+    z-index: 0;
+    transition-delay: 300ms;
+    color: rgb(5, 5, 91);
+    padding: 30px 15px;
+    overflow: hidden;
+}
+.section-2 img {
+    width: 125px;
+    height: 125px;
+    background-color: white;
+    box-shadow: cornsilk 5px 5px 5px 5px;
+    padding: 30px;
+    border-radius: 50%;
+}
+.section-2 h4 {
+    font-size: 24px;
+    color: rgb(5, 5, 105);
+    margin: 50px 0px 30px;
+}
+.section-2 ul li p {
+    color: rgb(5, 5, 91);
+}
+.section-2 li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    bottom: 0px;
+    transform: translateY(100%);
+    z-index: -1;
+    background: linear-gradient(pink, coral);
+}
+.section-2 li:hover::after {
+    transform: translateY(0%);
+    transition: all 500ms ease-in-out 0s;
+    border-radius: 8px;
+}
+.section-3 {
+    display: flex;
+    justify-content: space-around;
+    color: rgb(7, 7, 98);
+    padding: 100px 150px;
+}
+.section-3 button {
+    margin-top: 50px;
+    color: white;
+    font-size: 16px;
+    outline-offset: unset;
+    padding: 15px 25px;
+    border-radius: 25px;
+    background: linear-gradient(pink, coral, red);
+    transition: all 0.3s ease 0s;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    outline: none;
+}
+.business {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+.business img {
+    margin-right: 30px;
+}
+.business h6 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: rgb(3, 3, 68);
+    font-size: 18px;
+    padding: 60px 150px 0px;
+}
+footer .logo p {
+    padding-top: 35px;
+}
+footer h3 {
+    padding-bottom: 35px;
+}
+footer li {
+    padding-bottom: 20px;
+}
+.subscribe input {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    margin: 25px 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    border-radius: 25px;
+    outline: none;
+}
+.subscribe input::after {
+    content: "→";
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    color: rgb(3, 3, 101);
+    left: 0px;
+    transform: translateX(100%);
+}
+.subscribe input::placeholder{
+    padding-left: 10px;
+}
+.icon i {
+    margin-right: 30px;
+    transform: scale(1.3);
+}
